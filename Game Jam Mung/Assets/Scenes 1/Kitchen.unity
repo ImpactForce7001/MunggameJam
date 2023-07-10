@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8202678004566253919, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
       propertyPath: m_TagString
-      value: ToothbrushInteractionZone
+      value: FridgeinteractionZone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
@@ -1225,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867375739777631652, guid: 3b8ee485ed7f7f94ba172031031a3109, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.7
+      value: 7.03
       objectReference: {fileID: 0}
     - target: {fileID: 7867375739777631652, guid: 3b8ee485ed7f7f94ba172031031a3109, type: 3}
       propertyPath: m_LocalPosition.y

@@ -53,21 +53,45 @@ public class PlayerObjectInteraction : MonoBehaviour
                 }
                 else if (xyz.gameObject.tag == "LoungeDoor") //If the player begins toothbrush game
                 {
+                    
+                    if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
+                    {
+                        PlayerMovement.xPosition = 6.8f;
+                        PlayerMovement.yPosition = -2.18f;
+                    }
+                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
+                    {
+                        PlayerMovement.xPosition = -2.85f;
+                        PlayerMovement.yPosition = -2.18f;
+                    }
+                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3))
+                    {
+                        PlayerMovement.xPosition = -8f;
+                        PlayerMovement.yPosition = -2.18f;
+                    }
                     Debug.Log(PlayerPoints);
                     SceneManager.LoadScene(4);
                 }
                 else if (xyz.gameObject.tag == "BathroomDoor") //If the player begins toothbrush game
                 {
+                    
+                    PlayerMovement.xPosition = -6.5f;
+                    PlayerMovement.yPosition = -1.78f;
+                    
                     Debug.Log(PlayerPoints);
                     SceneManager.LoadScene(1);
                 }
                 else if (xyz.gameObject.tag == "KitchenDoor") //If the player begins toothbrush game
                 {
+                    PlayerMovement.xPosition = 7f;
+                    PlayerMovement.yPosition = -1.78f;
                     Debug.Log(PlayerPoints);
                     SceneManager.LoadScene(2);
                 }
                 else if (xyz.gameObject.tag == "BedroomDoor") //If the player begins toothbrush game
                 {
+                    PlayerMovement.xPosition = 7.7f;
+                    PlayerMovement.yPosition = -2.13f;
                     Debug.Log(PlayerPoints);
                     SceneManager.LoadScene(3);
                 }
