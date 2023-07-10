@@ -34,4 +34,15 @@ public class TaskObjectInteraction : MonoBehaviour
             interactMsg.SetActive(false);
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                Debug.Log("abc");
+            }
+        }
+    }
 }
