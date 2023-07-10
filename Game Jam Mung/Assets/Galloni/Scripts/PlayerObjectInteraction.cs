@@ -8,10 +8,10 @@ public class PlayerObjectInteraction : MonoBehaviour
     public bool abc = false;
     public static int PlayerPoints = 0;
     private Collider2D xyz;
-    private bool teeth = true;
-    private bool eat = true;
-    private bool wash = true;
-    private bool excercise = true;
+    public static bool teeth = true;
+    public static bool eat = true;
+    public static bool wash = true;
+    public static bool excercise = true;
     // Start is called before the first frame update
     void Start()
     {
