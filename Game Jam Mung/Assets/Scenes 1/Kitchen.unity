@@ -1689,9 +1689,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7292085811577334979, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: PauseTitle
+      value: 
+      objectReference: {fileID: 7292085812389936671}
     - target: {fileID: 7292085811577334981, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
       propertyPath: m_Name
       value: Pause Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810148, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_Transition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810148, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810150, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810150, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810150, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+--- !u!114 &7292085812389936671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 836412116937623626, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+  m_PrefabInstance: {fileID: 7292085812389936670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
