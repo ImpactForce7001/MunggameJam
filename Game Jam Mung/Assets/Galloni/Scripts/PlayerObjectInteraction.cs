@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerObjectInteraction : MonoBehaviour
 {
+    public static int JerryPoints = 0;
+    public bool abc = false;
+    public static int PlayerPoints = 0;
+    private Collider2D xyz;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,22 +17,29 @@ public class PlayerObjectInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (abc)
         {
-            Debug.Log(collision.gameObject.tag);
-            if (collision.gameObject.tag == "ToothbrushInteractionZone") //If the player begins toothbrush game
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                //Toothbrush actions i.e. activate minigame
+                
+                if (xyz.gameObject.tag == "ToothbrushInteractionZone") //If the player begins toothbrush game
+                {
+                    PlayerPoints += 1;
+                    Debug.Log(PlayerPoints);
+                }
             }
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        abc = true;
+        xyz = collision;
+        Debug.Log(xyz);
+    }
+   
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        abc = false;
     }
 }
