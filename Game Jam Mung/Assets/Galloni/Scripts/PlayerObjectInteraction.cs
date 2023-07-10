@@ -54,7 +54,22 @@ public class PlayerObjectInteraction : MonoBehaviour
                 else if (xyz.gameObject.tag == "LoungeDoor") //If the player begins toothbrush game
                 {
                     Debug.Log(PlayerPoints);
+                    SceneManager.LoadScene(4);
+                }
+                else if (xyz.gameObject.tag == "BathroomDoor") //If the player begins toothbrush game
+                {
+                    Debug.Log(PlayerPoints);
+                    SceneManager.LoadScene(1);
+                }
+                else if (xyz.gameObject.tag == "KitchenDoor") //If the player begins toothbrush game
+                {
+                    Debug.Log(PlayerPoints);
                     SceneManager.LoadScene(2);
+                }
+                else if (xyz.gameObject.tag == "BedroomDoor") //If the player begins toothbrush game
+                {
+                    Debug.Log(PlayerPoints);
+                    SceneManager.LoadScene(3);
                 }
             }
         }
