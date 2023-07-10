@@ -8,6 +8,10 @@ TagManager:
   - LaundryInteractionZone
   - ExcerciseInteractionZone
   - FridgeinteractionZone
+  - LoungeDoor
+  - KitchenDoor
+  - BedroomDoor
+  - BathroomDoor
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerObjectInteraction : MonoBehaviour
 {
@@ -32,23 +33,28 @@ public class PlayerObjectInteraction : MonoBehaviour
                     Debug.Log(PlayerPoints);
                     teeth = false;
                 }
-                if (xyz.gameObject.tag == "LaundryInteractionZone" && wash) //If the player begins toothbrush game
+                else if (xyz.gameObject.tag == "LaundryInteractionZone" && wash) //If the player begins washing game
                 {
                     PlayerPoints += 1;
                     Debug.Log(PlayerPoints);
                     wash = false;
                 }
-                if (xyz.gameObject.tag == "FridgeInteractionZone" && eat) //If the player begins toothbrush game
+                else if (xyz.gameObject.tag == "FridgeInteractionZone" && eat) //If the player begins eating game
                 {
                     PlayerPoints += 1;
                     Debug.Log(PlayerPoints);
                     eat = false;
                 }
-                if (xyz.gameObject.tag == "ExcerciseInteractionZone" && excercise) //If the player begins toothbrush game
+                else if (xyz.gameObject.tag == "ReadingInteractionZone" && excercise) //If the player begins Reading game
                 {
                     PlayerPoints += 1;
                     Debug.Log(PlayerPoints);
                     excercise = false;
+                }
+                else if (xyz.gameObject.tag == "LoungeDoor") //If the player begins toothbrush game
+                {
+                    Debug.Log(PlayerPoints);
+                    SceneManager.LoadScene(2);
                 }
             }
         }
