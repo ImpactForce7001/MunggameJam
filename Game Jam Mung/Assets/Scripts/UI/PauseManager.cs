@@ -23,6 +23,7 @@ public class PauseManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             paused = true;
+            Time.timeScale = 0;
         }
 
         if (!paused)
@@ -42,6 +43,7 @@ public class PauseManager : MonoBehaviour
     public void UnPause()
     {
         paused = false;
+        Time.timeScale = 1;
     }
 
     public void BackToMainMenu()
