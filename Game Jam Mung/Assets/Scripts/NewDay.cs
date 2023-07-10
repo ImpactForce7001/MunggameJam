@@ -19,7 +19,7 @@ public class NewDay : MonoBehaviour
             PlayerObjectInteraction.teeth = true;
             PlayerObjectInteraction.eat = true;
             PlayerObjectInteraction.wash = true;
-            PlayerObjectInteraction.excercise = true;
+            PlayerObjectInteraction.reading = true;
             SceneManager.LoadScene(2);
             JerryAi.timeUp = false;
         }
