@@ -8,6 +8,10 @@ public class PlayerObjectInteraction : MonoBehaviour
     public bool abc = false;
     public static int PlayerPoints = 0;
     private Collider2D xyz;
+    private bool teeth = true;
+    private bool eat = true;
+    private bool wash = true;
+    private bool excercise = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +26,29 @@ public class PlayerObjectInteraction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 
-                if (xyz.gameObject.tag == "ToothbrushInteractionZone") //If the player begins toothbrush game
+                if (xyz.gameObject.tag == "ToothbrushInteractionZone" && teeth) //If the player begins toothbrush game
                 {
                     PlayerPoints += 1;
                     Debug.Log(PlayerPoints);
+                    teeth = false;
+                }
+                if (xyz.gameObject.tag == "LaundryInteractionZone" && wash) //If the player begins toothbrush game
+                {
+                    PlayerPoints += 1;
+                    Debug.Log(PlayerPoints);
+                    wash = false;
+                }
+                if (xyz.gameObject.tag == "FridgeInteractionZone" && eat) //If the player begins toothbrush game
+                {
+                    PlayerPoints += 1;
+                    Debug.Log(PlayerPoints);
+                    eat = false;
+                }
+                if (xyz.gameObject.tag == "ExcerciseInteractionZone" && excercise) //If the player begins toothbrush game
+                {
+                    PlayerPoints += 1;
+                    Debug.Log(PlayerPoints);
+                    excercise = false;
                 }
             }
         }
@@ -35,7 +58,6 @@ public class PlayerObjectInteraction : MonoBehaviour
     {
         abc = true;
         xyz = collision;
-        Debug.Log(xyz);
     }
    
     private void OnTriggerExit2D(Collider2D collision)
