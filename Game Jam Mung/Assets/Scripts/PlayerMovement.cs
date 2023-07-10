@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 7f;
 
     public Animator animator;
     
@@ -18,19 +18,22 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
+        Debug.Log(horizontalInput);
         if (Input.GetKeyDown(KeyCode.A))
         {
             transform.localScale = new Vector3(5,5,5);
+            
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             transform.localScale = new Vector3(-5, 5, 5);
+            
         }
-        if (horizontalInput == 0)
+        if (horizontalInput < 0.10 && horizontalInput > -0.10)
         {
             animator.Play("Idle");
         }
-        else if (horizontalInput != 0)
+        else
         {
             animator.Play("Walk");
         }
