@@ -9,6 +9,7 @@ public class PauseManager : MonoBehaviour
     public bool paused = false;
     public Button ResumeButton;
     public Button ExitButton;
+    public Text PasueTitle;
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +29,13 @@ public class PauseManager : MonoBehaviour
         {
             ResumeButton.gameObject.SetActive(false);
             ExitButton.gameObject.SetActive(false);
+            PasueTitle.gameObject.SetActive(false);
         }
         else
         {
             ResumeButton.gameObject.SetActive(true);
             ExitButton.gameObject.SetActive(true);
+            PasueTitle.gameObject.SetActive(true);
         }
     }
 
@@ -43,7 +46,7 @@ public class PauseManager : MonoBehaviour
 
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("TitleScreen");
     }
 
 

@@ -1607,5 +1607,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810148, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_Transition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810148, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810150, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810150, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292085811788810150, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
