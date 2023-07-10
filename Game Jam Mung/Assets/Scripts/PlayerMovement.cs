@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 7f;
-
+    public static float xPosition = 6.8f;
+    public static float yPosition = -2.18f;
     public Animator animator;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = new Vector3(xPosition, yPosition, -9);
     }
 
     // Update is called once per frame
