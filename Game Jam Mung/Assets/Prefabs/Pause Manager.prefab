@@ -48,7 +48,7 @@ MonoBehaviour:
   paused: 0
   ResumeButton: {fileID: 7292085811788810148}
   ExitButton: {fileID: 7292085813074761392}
-  PasueTitle: {fileID: 836412116937623626}
+  PauseTitle: {fileID: 836412116937623626}
 --- !u!1 &7292085811788810152
 GameObject:
   m_ObjectHideFlags: 0
