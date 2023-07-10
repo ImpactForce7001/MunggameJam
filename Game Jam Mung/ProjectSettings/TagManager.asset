@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ToothbrushInteractionZone
+  - LaundryInteractionZone
+  - ExcerciseInteractionZone
+  - FridgeinteractionZone
   layers:
   - Default
   - TransparentFX
