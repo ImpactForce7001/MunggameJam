@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 1677854692236442128}
   - component: {fileID: 836412116937623626}
   m_Layer: 5
-  m_Name: Pasue Title
+  m_Name: Pause Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
