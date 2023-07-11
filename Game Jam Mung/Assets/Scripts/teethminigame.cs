@@ -23,6 +23,11 @@ public class teethminigame : MonoBehaviour
     {
         if (teethStart)
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                teethStart = false;
+                teethObject.SetActive(false);
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 clicks += 1;

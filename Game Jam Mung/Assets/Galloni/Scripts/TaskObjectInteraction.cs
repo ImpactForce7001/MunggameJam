@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TaskObjectInteraction : MonoBehaviour
 {
 
     public GameObject interactMsg; //The popup message to interact i.e. 'Press [E] to interact'
-
+    public TMPro.TextMeshProUGUI textMeshPro;
+    public string tooltip;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class TaskObjectInteraction : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             interactMsg.SetActive(true);
+            textMeshPro.text = tooltip;
         }
     }
 
@@ -32,6 +35,7 @@ public class TaskObjectInteraction : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             interactMsg.SetActive(false);
+            textMeshPro.text = "";
         }
     }
 

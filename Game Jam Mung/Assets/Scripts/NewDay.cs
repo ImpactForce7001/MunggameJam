@@ -43,5 +43,27 @@ public class NewDay : MonoBehaviour
                 JerryWin = true;
             }
         }
+        if (PlayerWin)
+        {
+            if (JerryWin)
+            {
+                //print text saying jerry won, and player won.
+            }
+            else
+            {
+                //print text saying player won, but Jerry lost
+            }
+        }
+        else
+        {
+            if (JerryWin)
+            {
+                //print text saying player lost, but Jerry won
+            }
+            else
+            {
+                //print text saying both player and jerry lost.
+            }
+        }
     }
 }
