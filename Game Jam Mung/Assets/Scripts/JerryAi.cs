@@ -152,7 +152,7 @@ public class JerryAi : MonoBehaviour
 
         }
         JerryX += MoveDirectionJerry * 5f * Time.deltaTime;
-        transform.position = new Vector3(JerryX, JerryY, 0);
+        transform.position = new Vector3(JerryX, JerryY, -9);
         //transform.position = transform.position + new Vector3(MoveDirectionJerry * 5f * Time.deltaTime, 0, 0);
     }
     public IEnumerator JerryDirection()
