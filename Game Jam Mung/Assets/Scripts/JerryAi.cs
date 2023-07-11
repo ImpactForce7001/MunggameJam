@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JerryAi : MonoBehaviour
 {
 
     public static bool timeUp = false;
+    public static float JerryX = 0;
+    public static float JerryY = -2f;
+    public static int JerryScene = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +33,13 @@ public class JerryAi : MonoBehaviour
 
             }
         */
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(JerryScene))
+        {
+
+        }
+        else
+        {
+            JerryY = 5f;
+        }
     }
 }
