@@ -11,10 +11,12 @@ public class PauseManager : MonoBehaviour
     public Button ExitButton;
     public Text PauseTitle;
 
+    public GameObject GameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager = GameObject.Find("Game Manager");
     }
 
     // Update is called once per frame
@@ -49,6 +51,7 @@ public class PauseManager : MonoBehaviour
     public void BackToMainMenu()
     {
         Time.timeScale = 1;
+        GameManager.AddComponent<GameManager>().AllowTimerReset();
         SceneManager.LoadScene("TitleScreen");
     }
 
