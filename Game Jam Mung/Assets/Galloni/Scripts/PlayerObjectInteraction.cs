@@ -45,9 +45,14 @@ public class PlayerObjectInteraction : MonoBehaviour
                     Debug.Log(PlayerPoints);
                     eat = false;
                 }
-                else if (xyz.gameObject.tag == "ReadingInteractionZone") //If the player begins Reading game
+                else if (xyz.gameObject.tag == "ReadingInteractionZone" && reading) //If the player begins Reading game
                 {
                     xyz.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                    reading = false;
+                }
+                else if(xyz.gameObject.tag == "PhoneInteractionZone")
+                {
+                    xyz.gameObject.SetActive(false);
                 }
                 else if (xyz.gameObject.tag == "LoungeDoor") //If the player begins toothbrush game
                 {
@@ -62,7 +67,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                         PlayerMovement.xPosition = -2.85f;
                         PlayerMovement.yPosition = -2.18f;
                     }
-                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3))
+                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3)|| SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(5))
                     {
                         PlayerMovement.xPosition = -8f;
                         PlayerMovement.yPosition = -2.18f;

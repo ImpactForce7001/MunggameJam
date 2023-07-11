@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 7f;
-    public static float xPosition = 6.8f;
-    public static float yPosition = -2.18f;
+    public static float xPosition = -6.8f;
+    public static float yPosition = -2.13f;
     public Animator animator;
     
     // Start is called before the first frame update

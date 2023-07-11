@@ -13,6 +13,7 @@ TagManager:
   - BedroomDoor
   - BathroomDoor
   - ReadingInteractionZone
+  - PhoneInteractionZone
   layers:
   - Default
   - TransparentFX
