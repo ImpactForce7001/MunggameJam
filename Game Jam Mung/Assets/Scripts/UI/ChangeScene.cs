@@ -7,6 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     public void StartGame()
     {
+
         SceneManager.LoadScene(4);
     }
     public void ExitGame()
