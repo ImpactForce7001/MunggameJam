@@ -80,7 +80,8 @@ public class PlayerObjectInteraction : MonoBehaviour
                     {
                         JerryPoints += 1;
                         JerryWash = false;
-                        Debug.Log("Jerry laundry done");
+                        HaveJerryClothes = false;
+                        JerryClothesClean = false;
                     }
 
                     else
@@ -95,7 +96,8 @@ public class PlayerObjectInteraction : MonoBehaviour
                     {
                         PlayerPoints += 1;
                         wash = false;
-                        Debug.Log("player laundry done");
+                        HavePlayerClothes = false;
+                        PlayerClothesClean = false;
                     }
                     HavePlayerClothes = true;
                 }

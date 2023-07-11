@@ -21,11 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes 1/Lounge Room.unity
     guid: cc3ae31ecdcaff940a644b6f253effcb
   - enabled: 1
-<<<<<<< HEAD
     path: Assets/Scenes 1/BedroomStart.unity
     guid: 79d107a9f26c3df4495d1837c1be2d5d
-=======
-    path: Assets/Scenes 1/ResultsScreen.unity
-    guid: 9935c3c5fa389824da8e1ef22fd1998b
->>>>>>> 1846b1963845f6bb7ee7391abc28728f97a082c2
+  - enabled: 1
+    path: Assets/Scenes 1/End Scene.unity
+    guid: 9931ede3a6c422c4f947ed1f2d1f82ce
   m_configObjects: {}

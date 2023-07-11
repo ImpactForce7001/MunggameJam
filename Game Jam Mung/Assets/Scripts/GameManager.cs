@@ -58,7 +58,31 @@ public class GameManager : MonoBehaviour
             //SceneManager.LoadScene(0);
 
         }
-
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(6))
+        {
+            if (PlayerWin)
+            {
+                if (JerryWin)
+                {
+                    finalText.text = "Jerry won, and you won! \n CONGRATULATIONS!";
+                }
+                else
+                {
+                    finalText.text = "Jerry lost, but you won! \n congratulations?";
+                }
+            }
+            else
+            {
+                if (JerryWin)
+                {
+                    finalText.text = "Jerry won, and you lost! \n congratulations?";
+                }
+                else
+                {
+                    finalText.text = "Jerry lost, and you lost \n bad luck!";
+                }
+            }
+        }
        
     }
 
@@ -72,11 +96,9 @@ public class GameManager : MonoBehaviour
         PlayerObjectInteraction.eat = true;
         PlayerObjectInteraction.wash = true;
         PlayerObjectInteraction.reading = true;
-        PlayerObjectInteraction.JerryTeeth = true;
         PlayerObjectInteraction.JerryEat = true;
         PlayerObjectInteraction.JerryWash = true;
-        PlayerObjectInteraction.JerryReading = true;
-        SceneManager.LoadScene(3);
+        
         timeElapsed = 0;
         days += 1;
         if (days >= 4)
@@ -86,33 +108,14 @@ public class GameManager : MonoBehaviour
             {
                 PlayerWin = true;
             }
-            if (PlayerObjectInteraction.JerryPoints == 16)
+            if (PlayerObjectInteraction.JerryPoints == 8)
             {
                 JerryWin = true;
             }
+            SceneManager.LoadScene(6);
         }
-        if (PlayerWin)
-        {
-            if (JerryWin)
-            {
-                //print text saying jerry won, and player won.
-            }
-            else
-            {
-                //print text saying player won, but Jerry lost
-            }
-        }
-        else
-        {
-            if (JerryWin)
-            {
-                //print text saying player lost, but Jerry won
-            }
-            else
-            {
-                //print text saying both player and jerry lost.
-            }
-        }
+        SceneManager.LoadScene(3);
+
     }
 
 }
