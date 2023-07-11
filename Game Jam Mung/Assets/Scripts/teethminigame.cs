@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using TMPro;
-using UnityEngine.TerrainTools;
-
 public class teethminigame : MonoBehaviour
 {
     public static int clicks = 0;
@@ -23,6 +20,12 @@ public class teethminigame : MonoBehaviour
     {
         if (teethStart)
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                
+                teethStart = false;
+                teethObject.SetActive(false);
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 clicks += 1;
@@ -46,6 +49,7 @@ public class teethminigame : MonoBehaviour
                 PlayerObjectInteraction.teeth = false;
                 teethObject.SetActive(false);
                 teethStart = false;
+                PlayerMovement.inGame = false;
             }
         }
     }
