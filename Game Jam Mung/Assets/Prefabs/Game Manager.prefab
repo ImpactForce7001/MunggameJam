@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRounded: 0
-  timeLimit: 180
+  timeLimit: 120
   timeLeftInSeconds: 0
   timeLeftInMinutes: 0
   timeDisplayString: 
