@@ -43,6 +43,7 @@ public class teethminigame : MonoBehaviour
             }
             if (clicks >= 100)
             {
+                PhoneController.strikeTeeth = true;
                 PlayerObjectInteraction.PlayerPoints += 1;
                 clicks = 0;
                 Debug.Log(PlayerObjectInteraction.PlayerPoints);
