@@ -30,6 +30,7 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool JerryClothesClean = false;
     public static bool HavePlayerClothes = false;
     public static bool PlayerClothesClean = false;
+    public static bool laundryDone = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +64,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                     else if (!HaveJerryClothes && JerryClothesClean)
                     {
                         HaveJerryClothes = true;
+                        laundryDone = false;
                     }
                     else if (HavePlayerClothes && !PlayerClothesClean)
                     {
@@ -71,6 +73,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                     else if (!HavePlayerClothes && PlayerClothesClean)
                     {
                         HavePlayerClothes = true;
+                        laundryDone = false;
                     }
 
                 }
@@ -183,7 +186,7 @@ public class PlayerObjectInteraction : MonoBehaviour
         HaveJerryClothes = false;
         yield return new WaitForSeconds(10);
         JerryClothesClean = true;
-        Debug.Log("Jerry laundry finished");
+        laundryDone = true;
     }
     public IEnumerator washPlayerClothes()
     {
@@ -192,6 +195,6 @@ public class PlayerObjectInteraction : MonoBehaviour
         yield return new WaitForSeconds(10);
 
         PlayerClothesClean = true;
-        Debug.Log("Player laundry finished");
+        laundryDone = false;
     }
 }

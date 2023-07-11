@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public string timeDisplayString;
     public Text timeDisplayText;
     public TextMeshProUGUI finalText;
+    public TextMeshProUGUI laundryText;
 
     public static int days = 0;
     public static bool JerryWin = false;
@@ -83,6 +84,14 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        if (PlayerObjectInteraction.laundryDone)
+        {
+            laundryText.text = "laundry is Done!";
+        }
+        else
+        {
+            laundryText.text = "";
+        }
        
     }
 
@@ -98,7 +107,7 @@ public class GameManager : MonoBehaviour
         PlayerObjectInteraction.reading = true;
         PlayerObjectInteraction.JerryEat = true;
         PlayerObjectInteraction.JerryWash = true;
-        
+        PlayerMovement.inGame = false;
         timeElapsed = 0;
         days += 1;
         if (days >= 4)

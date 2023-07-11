@@ -83,7 +83,7 @@ public class BurgerMinigame : MonoBehaviour
 
     public void StartBurgerGame()
     {
-        inMinigame = true;
+        PlayerMovement.inGame = true;
         currentItem = 0;
     }
 
