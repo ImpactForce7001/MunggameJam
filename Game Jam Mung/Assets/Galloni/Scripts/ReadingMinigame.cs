@@ -26,10 +26,10 @@ public class ReadingMinigame : MonoBehaviour
         rightSideSampleTMP = rightSideSample.GetComponent<TextMeshProUGUI>();
 
         phraseLeft = "The black cat sat on the shaggy carpet.\r\nThe black cat is sitting on the shaggy carpet.\r\nWhat a silly black cat, to sit on the shaggy carpet.";
-        phraseRight = "The black cat has never before sat on the shaggy carpet.\r\nThe black cat will never again sit on the shaggy carpet.";
+        phraseRight = "The black cat has never sat on the shaggy carpet.\r\nThe black cat will never again sit on the shaggy carpet.";
         leftSideSampleTMP.text = phraseLeft;
         rightSideSampleTMP.text = phraseRight;
-        phraseRight = "The black cat has never before sat on the shaggy carpet.The black cat will never again sit on the shaggy carpet.";
+        phraseRight = "The black cat has never sat on the shaggy carpet.The black cat will never again sit on the shaggy carpet.";
 
         phraseRightInput = "";
     }
