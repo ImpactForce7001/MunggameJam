@@ -28,7 +28,11 @@ public class JerryAi : MonoBehaviour
     {
         if (JerryScene == 4)
         {
+<<<<<<< HEAD
             if (JerryX < -7.5f)
+=======
+            if(JerryX < -7.5f)
+>>>>>>> bc774d5aaeec1704ca23cc5fc5c5dd221a90d804
             {
                 if (!newScene && OpenDoor)
                 {
@@ -36,6 +40,7 @@ public class JerryAi : MonoBehaviour
                     JerryX = 7.7f;
                     newScene = true;
                 }
+<<<<<<< HEAD
 
             }
             else if (JerryX > -4f && JerryX < -1.5f)
@@ -82,6 +87,54 @@ public class JerryAi : MonoBehaviour
                 }
 
             }
+=======
+                
+            }
+            else if (JerryX > -4f && JerryX < -1.5f)
+            {
+                if (!newScene && OpenDoor)
+                {
+                    JerryScene = 2;
+                    JerryX = 7f;
+                    newScene = true;
+                }
+                
+            }
+            else if (JerryX > 5.5f)
+            {
+                if (!newScene && OpenDoor)
+                {
+                    JerryScene = 1;
+                    JerryX = -6.5f;
+                    newScene = true;
+                }
+                
+            }
+            else
+            {
+                newScene = false;
+            }
+            if(JerryX <= -8 || JerryX >= 8.5f)
+            {
+                MoveDirectionJerry *= -1;
+                Vector3 theScale = transform.localScale;
+                theScale.x *= -1;
+                transform.localScale = theScale;
+            }
+        }
+        else if (JerryScene == 3)
+        {
+            if (JerryX > 7f)
+            {
+                if (!newScene && OpenDoor)
+                {
+                    JerryScene = 4;
+                    JerryX = -7.5f;
+                    newScene = true;
+                }
+                
+            }
+>>>>>>> bc774d5aaeec1704ca23cc5fc5c5dd221a90d804
             else
             {
                 newScene = false;
@@ -104,7 +157,11 @@ public class JerryAi : MonoBehaviour
                     JerryX = -3f;
                     newScene = true;
                 }
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> bc774d5aaeec1704ca23cc5fc5c5dd221a90d804
             }
             else
             {
@@ -120,7 +177,11 @@ public class JerryAi : MonoBehaviour
         }
         else if (JerryScene == 1)
         {
+<<<<<<< HEAD
             if (JerryX < 5.5f)
+=======
+            if (JerryX < 5.5f )
+>>>>>>> bc774d5aaeec1704ca23cc5fc5c5dd221a90d804
             {
                 if (!newScene && OpenDoor)
                 {
@@ -128,7 +189,11 @@ public class JerryAi : MonoBehaviour
                     JerryX = 7f;
                     newScene = true;
                 }
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> bc774d5aaeec1704ca23cc5fc5c5dd221a90d804
             }
             else
             {
@@ -152,7 +217,11 @@ public class JerryAi : MonoBehaviour
 
         }
         JerryX += MoveDirectionJerry * 5f * Time.deltaTime;
+<<<<<<< HEAD
         transform.position = new Vector3(JerryX, JerryY, 0);
+=======
+        transform.position = new Vector3( JerryX, JerryY, 0);
+>>>>>>> bc774d5aaeec1704ca23cc5fc5c5dd221a90d804
         //transform.position = transform.position + new Vector3(MoveDirectionJerry * 5f * Time.deltaTime, 0, 0);
     }
     public IEnumerator JerryDirection()
@@ -179,8 +248,13 @@ public class JerryAi : MonoBehaviour
             }
             yield return new WaitForSeconds(Random.Range(3, 5));
         }
+<<<<<<< HEAD
 
 
+=======
+        
+        
+>>>>>>> bc774d5aaeec1704ca23cc5fc5c5dd221a90d804
     }
     public IEnumerator DoorCheck()
     {
@@ -194,7 +268,11 @@ public class JerryAi : MonoBehaviour
             {
                 OpenDoor = false;
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> bc774d5aaeec1704ca23cc5fc5c5dd221a90d804
             yield return new WaitForSeconds(1.5f);
         }
 
