@@ -18,7 +18,11 @@ TagManager:
 =======
   - JerryDirtyClothes
   - PlayerDirtyClothes
+<<<<<<< HEAD
 >>>>>>> 1846b1963845f6bb7ee7391abc28728f97a082c2
+=======
+  - StoveinteractionZone
+>>>>>>> e4a327f7c3c124d6fe63b5a25f71ffab7f3229e3
   layers:
   - Default
   - TransparentFX
