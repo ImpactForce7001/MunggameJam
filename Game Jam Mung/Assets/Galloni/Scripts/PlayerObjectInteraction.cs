@@ -19,6 +19,7 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool JerryReading = true;
     public GameObject teethObject;
 
+<<<<<<< HEAD
 
 
 
@@ -29,10 +30,22 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool JerryClothesClean = false;
     public static bool HavePlayerClothes = false;
     public static bool PlayerClothesClean = false;
+=======
+    public static bool AllowResetStats = true;
+>>>>>>> 7a55166b6baf953be0112811460df7d98b6e4cf8
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (AllowResetStats)
+        {
+            AllowResetStats = false;
+            JerryPoints = 0;
+            PlayerPoints = 0;
+            teeth = true;
+            eat = true;
+            wash = true;
+            reading = true;
+        }
     }
 
     // Update is called once per frame
@@ -100,8 +113,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                 }
                 else if (xyz.gameObject.tag == "FridgeinteractionZone" && eat) //If the player begins eating game
                 {
-                    PlayerPoints += 1;
-                    Debug.Log(PlayerPoints);
+                    xyz.gameObject.transform.GetChild(1).gameObject.GetComponent<BurgerMinigame>().StartBurgerGame();
                     eat = false;
                 }
                 else if (xyz.gameObject.tag == "ReadingInteractionZone") //If the player begins Reading game
@@ -166,6 +178,7 @@ public class PlayerObjectInteraction : MonoBehaviour
     {
         abc = false;
     }
+<<<<<<< HEAD
     public IEnumerator washJerryClothes()
     {
         HaveJerryClothes = false;
@@ -181,5 +194,11 @@ public class PlayerObjectInteraction : MonoBehaviour
 
         PlayerClothesClean = true;
         Debug.Log("Player laundry finished");
+=======
+
+    public void AllowReset()
+    {
+        AllowResetStats = true;
+>>>>>>> 7a55166b6baf953be0112811460df7d98b6e4cf8
     }
 }

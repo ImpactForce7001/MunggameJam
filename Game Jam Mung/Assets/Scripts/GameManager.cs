@@ -56,4 +56,9 @@ public class GameManager : MonoBehaviour
        
     }
 
+    public void AllowTimerReset()
+    {
+        justStarted = true;
+    }
+
 }
