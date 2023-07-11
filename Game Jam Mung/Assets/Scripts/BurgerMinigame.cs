@@ -146,7 +146,7 @@ public class BurgerMinigame : MonoBehaviour
     {
         if (currentItem == 6)
         {
-            if(transform.parent.gameObject.tag == "StoveInteractionZone")
+            if(transform.parent.gameObject.tag == "StoveinteractionZone")
             {
                 PhoneController.strikeJFood = true;
             }
