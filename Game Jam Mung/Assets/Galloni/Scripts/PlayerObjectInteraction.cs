@@ -32,6 +32,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                 {
                     teethminigame.teethStart = true;
                     teethObject.SetActive(true);
+                    PlayerMovement.inGame = true;
                 }
                 else if (xyz.gameObject.tag == "LaundryInteractionZone" && wash) //If the player begins washing game
                 {
