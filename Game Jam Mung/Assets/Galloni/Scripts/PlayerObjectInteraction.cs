@@ -13,7 +13,22 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool eat = true;
     public static bool wash = true;
     public static bool reading = true;
+    public static bool JerryTeeth = true;
+    public static bool JerryEat = true;
+    public static bool JerryWash = true;
+    public static bool JerryReading = true;
     public GameObject teethObject;
+
+
+
+
+    //all the laundry code is here
+    public static bool JerryNeedsLaundry = false;
+    public GameObject JerryClothes;
+    public static bool HaveJerryClothes = false;
+    public static bool JerryClothesClean = false;
+    public static bool HavePlayerClothes = false;
+    public static bool PlayerClothesClean = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,11 +49,54 @@ public class PlayerObjectInteraction : MonoBehaviour
                     teethObject.SetActive(true);
                     PlayerMovement.inGame = true;
                 }
-                else if (xyz.gameObject.tag == "LaundryInteractionZone" && wash) //If the player begins washing game
+                else if (xyz.gameObject.tag == "LaundryInteractionZone" && (wash || JerryWash)) //If the player begins washing game
                 {
-                    PlayerPoints += 1;
-                    Debug.Log(PlayerPoints);
-                    wash = false;
+                    if(HavePlayerClothes && HaveJerryClothes && !JerryClothesClean)
+                    {
+                        StartCoroutine(washJerryClothes());
+                    }
+                    else if(HaveJerryClothes && !JerryClothesClean)
+                    {
+                        StartCoroutine(washJerryClothes());
+                    }
+                    else if (!HaveJerryClothes && JerryClothesClean)
+                    {
+                        HaveJerryClothes = true;
+                    }
+                    else if (HavePlayerClothes && !PlayerClothesClean)
+                    {
+                        StartCoroutine(washPlayerClothes());
+                    }
+                    else if (!HavePlayerClothes && PlayerClothesClean)
+                    {
+                        HavePlayerClothes = true;
+                    }
+
+                }
+                else if (xyz.gameObject.tag == "JerryDirtyClothes" && wash) //If the player begins washing game
+                {
+                    if (JerryClothesClean)
+                    {
+                        JerryPoints += 1;
+                        JerryWash = false;
+                        Debug.Log("Jerry laundry done");
+                    }
+                    
+                    else
+                    {
+                        HaveJerryClothes = true;
+                    }
+                    
+                }
+                else if (xyz.gameObject.tag == "PlayerDirtyClothes" && wash) //If the player begins washing game
+                {
+                    if (PlayerClothesClean)
+                    {
+                        PlayerPoints += 1;
+                        wash = false;
+                        Debug.Log("player laundry done");
+                    }
+                    HavePlayerClothes = true;
                 }
                 else if (xyz.gameObject.tag == "FridgeinteractionZone" && eat) //If the player begins eating game
                 {
@@ -107,5 +165,21 @@ public class PlayerObjectInteraction : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         abc = false;
+    }
+    public IEnumerator washJerryClothes()
+    {
+        HaveJerryClothes = false;
+        yield return new WaitForSeconds(10);
+        JerryClothesClean = true;
+        Debug.Log("Jerry laundry finished");
+    }
+    public IEnumerator washPlayerClothes()
+    {
+        HavePlayerClothes = false;
+
+        yield return new WaitForSeconds(10);
+
+        PlayerClothesClean = true;
+        Debug.Log("Player laundry finished");
     }
 }

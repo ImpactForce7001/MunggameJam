@@ -298,6 +298,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1362455712635892545, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.06
+      objectReference: {fileID: 0}
     - target: {fileID: 2764314458427187687, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
       propertyPath: tooltip
       value: Grab your dirty clothes
@@ -369,6 +373,10 @@ PrefabInstance:
     - target: {fileID: 8202678004566253919, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
       propertyPath: m_Name
       value: Task Object (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202678004566253919, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
+      propertyPath: m_TagString
+      value: PlayerDirtyClothes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
@@ -1576,6 +1584,14 @@ PrefabInstance:
     - target: {fileID: 8202678004566253919, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
       propertyPath: m_Name
       value: Task Object (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202678004566253919, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202678004566253919, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
+      propertyPath: m_TagString
+      value: JerryDirtyClothes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
