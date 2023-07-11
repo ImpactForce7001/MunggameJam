@@ -43,7 +43,7 @@ public class JerryAi : MonoBehaviour
                 if (!newScene && OpenDoor)
                 {
                     JerryScene = 2;
-                    JerryX = 7f;
+                    JerryX = 6.5f;
                     newScene = true;
                 }
 
@@ -120,7 +120,7 @@ public class JerryAi : MonoBehaviour
         }
         else if (JerryScene == 1)
         {
-            if (JerryX < 5.5f)
+            if (JerryX < -5.5f)
             {
                 if (!newScene && OpenDoor)
                 {
