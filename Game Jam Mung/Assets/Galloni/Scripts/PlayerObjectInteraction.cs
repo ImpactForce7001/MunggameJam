@@ -112,7 +112,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                 else if (xyz.gameObject.tag == "StoveinteractionZone" && JerryEat) //If the player begins eating game
                 {
                     xyz.gameObject.transform.GetChild(1).gameObject.GetComponent<BurgerMinigame>().StartBurgerGame();
-                    eatJerry = false;
+                    JerryEat = false;
                 }
                 else if (xyz.gameObject.tag == "ReadingInteractionZone") //If the player begins Reading game
                 {
