@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -13,13 +14,13 @@ public class GameManager : MonoBehaviour
     public int timeLeftInMinutes;
     public string timeDisplayString;
     public Text timeDisplayText;
-    // Start is called before the first frame update
+
     void Start()
     {
-        Debug.Log("hi");
+        Debug.Log("Loaded New Scene");
         if(justStarted)
         {
-            Debug.Log("Reset");
+            Debug.Log("Timer Reset");
             timeElapsed = 0;
             justStarted = false;
         }
@@ -47,6 +48,12 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Day End");
             timeDisplayText.text = "0:00";
+            
+            //SceneManager.LoadScene(0);
+
         }
+
+       
     }
+
 }

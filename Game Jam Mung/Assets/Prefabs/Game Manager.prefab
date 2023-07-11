@@ -232,3 +232,4 @@ MonoBehaviour:
   timeLeftInMinutes: 0
   timeDisplayString: 
   timeDisplayText: {fileID: 4010537897585424005}
+  fadeOut: {fileID: 0}
