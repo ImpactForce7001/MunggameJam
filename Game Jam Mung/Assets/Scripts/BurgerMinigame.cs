@@ -145,15 +145,6 @@ public class BurgerMinigame : MonoBehaviour
     {
         if (currentItem == 6)
         {
-            if(transform.parent.gameObject.tag == "StoveInteractionZone")
-            {
-                PhoneController.strikeJFood = true;
-            }
-            else
-            {
-                PhoneController.strikeFood = true;
-            }
-
             topBun.gameObject.transform.position = new Vector2(1287, 200 + 25 * currentItem);
             PlayerObjectInteraction.PlayerPoints += 1;
             inMinigame = false;
