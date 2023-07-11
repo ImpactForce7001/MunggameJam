@@ -83,6 +83,7 @@ public class BurgerMinigame : MonoBehaviour
 
     public void StartBurgerGame()
     {
+        inMinigame = true;
         PlayerMovement.inGame = true;
         currentItem = 0;
     }
@@ -148,6 +149,7 @@ public class BurgerMinigame : MonoBehaviour
             topBun.gameObject.transform.position = new Vector2(1287, 200 + 25 * currentItem);
             PlayerObjectInteraction.PlayerPoints += 1;
             inMinigame = false;
+            PlayerMovement.inGame = false;
         }
     }
 }
