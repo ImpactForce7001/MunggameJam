@@ -12,11 +12,13 @@ public class PauseManager : MonoBehaviour
     public Text PauseTitle;
 
     public GameObject GameManager;
+    public GameObject PlayerManager;
 
     // Start is called before the first frame update
     void Start()
     {
         GameManager = GameObject.Find("Game Manager");
+        PlayerManager = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -51,7 +53,8 @@ public class PauseManager : MonoBehaviour
     public void BackToMainMenu()
     {
         Time.timeScale = 1;
-        GameManager.AddComponent<GameManager>().AllowTimerReset();
+        GameManager.GetComponent<GameManager>().AllowTimerReset();
+        PlayerManager.GetComponent<PlayerObjectInteraction>().AllowReset();
         SceneManager.LoadScene("TitleScreen");
     }
 

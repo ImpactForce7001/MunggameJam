@@ -761,7 +761,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &830735225
 PrefabInstance:
@@ -780,8 +780,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2764314458427187687, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
       propertyPath: tooltip
-      value: Fridge \n Make food here
+      value: Make food
       objectReference: {fileID: 0}
+    - target: {fileID: 2764314458427187687, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
+      propertyPath: textMeshPro
+      value: 
+      objectReference: {fileID: 1209313315}
     - target: {fileID: 5157474150995221167, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
       propertyPath: m_Size.x
       value: 3.0394578
@@ -1337,7 +1341,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1065151910
 GameObject:
@@ -2437,7 +2441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7834177462873839757, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7834177462873839757, guid: a2b3fa6e5af0bcb40b537fde36a64f73, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3190,7 +3194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7292085811577334978, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7292085811577334978, guid: 17fdd409785cf2e47a06e00710bdd9c3, type: 3}
       propertyPath: m_LocalPosition.x

@@ -15,13 +15,13 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool reading = true;
     public GameObject teethObject;
 
-    public static bool newDay = true;
+    public static bool AllowResetStats = true;
     // Start is called before the first frame update
     void Start()
     {
-        if (newDay)
+        if (AllowResetStats)
         {
-            newDay = false;
+            AllowResetStats = false;
             JerryPoints = 0;
             PlayerPoints = 0;
             teeth = true;
@@ -117,5 +117,10 @@ public class PlayerObjectInteraction : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         abc = false;
+    }
+
+    public void AllowReset()
+    {
+        AllowResetStats = true;
     }
 }

@@ -38,7 +38,7 @@ public class BurgerMinigame : MonoBehaviour
         ingredients.Add(topBun);
 
         //shuffle
-        for (int i = 0; i < 25; i++)
+        for (int i = 0; i < 100; i++)
         {
             int item1 = Random.Range(0, ingredients.Count);
             int item2 = Random.Range(0, ingredients.Count);
