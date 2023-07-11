@@ -15,6 +15,7 @@ TagManager:
   - ReadingInteractionZone
   - JerryDirtyClothes
   - PlayerDirtyClothes
+  - StoveinteractionZone
   layers:
   - Default
   - TransparentFX
