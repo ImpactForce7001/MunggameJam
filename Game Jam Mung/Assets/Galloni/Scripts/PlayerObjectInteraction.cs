@@ -11,6 +11,7 @@ public class PlayerObjectInteraction : MonoBehaviour
     private Collider2D xyz;
     public static bool teeth = true;
     public static bool eat = true;
+    public static bool eatJerry = true;
     public static bool wash = true;
     public static bool reading = true;
     public static bool JerryTeeth = true;
@@ -102,6 +103,11 @@ public class PlayerObjectInteraction : MonoBehaviour
                 {
                     xyz.gameObject.transform.GetChild(1).gameObject.GetComponent<BurgerMinigame>().StartBurgerGame();
                     eat = false;
+                }
+                else if (xyz.gameObject.tag == "StoveinteractionZone" && eatJerry) //If the player begins eating game
+                {
+                    xyz.gameObject.transform.GetChild(1).gameObject.GetComponent<BurgerMinigame>().StartBurgerGame();
+                    eatJerry = false;
                 }
                 else if (xyz.gameObject.tag == "ReadingInteractionZone") //If the player begins Reading game
                 {

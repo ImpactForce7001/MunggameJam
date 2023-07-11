@@ -54,7 +54,7 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1;
         GameManager.GetComponent<GameManager>().AllowTimerReset();
-        PlayerManager.GetComponent<PlayerObjectInteraction>().AllowReset();
+        //PlayerManager.GetComponent<PlayerObjectInteraction>().AllowReset();
         SceneManager.LoadScene("TitleScreen");
     }
 

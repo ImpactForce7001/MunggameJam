@@ -26,6 +26,7 @@ public class NewDay : MonoBehaviour
     {
         PlayerObjectInteraction.teeth = true;
         PlayerObjectInteraction.eat = true;
+        PlayerObjectInteraction.eatJerry = true;
         PlayerObjectInteraction.wash = true;
         PlayerObjectInteraction.reading = true;
         SceneManager.LoadScene(3);
