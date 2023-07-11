@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static bool justStarted = true;
     public static float timeElapsed;
     public int timeRounded;
     public int timeLimit = 60;
@@ -15,7 +16,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("hi");
+        if(justStarted)
+        {
+            Debug.Log("Reset");
+            timeElapsed = 0;
+            justStarted = false;
+        }
     }
 
     // Update is called once per frame
