@@ -19,7 +19,6 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool JerryReading = true;
     public GameObject teethObject;
 
-<<<<<<< HEAD
 
 
 
@@ -30,22 +29,10 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool JerryClothesClean = false;
     public static bool HavePlayerClothes = false;
     public static bool PlayerClothesClean = false;
-=======
-    public static bool AllowResetStats = true;
->>>>>>> 7a55166b6baf953be0112811460df7d98b6e4cf8
     // Start is called before the first frame update
     void Start()
     {
-        if (AllowResetStats)
-        {
-            AllowResetStats = false;
-            JerryPoints = 0;
-            PlayerPoints = 0;
-            teeth = true;
-            eat = true;
-            wash = true;
-            reading = true;
-        }
+
     }
 
     // Update is called once per frame
@@ -55,7 +42,7 @@ public class PlayerObjectInteraction : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
+
                 if (xyz.gameObject.tag == "ToothbrushInteractionZone" && teeth) //If the player begins toothbrush game
                 {
                     teethminigame.teethStart = true;
@@ -64,11 +51,11 @@ public class PlayerObjectInteraction : MonoBehaviour
                 }
                 else if (xyz.gameObject.tag == "LaundryInteractionZone" && (wash || JerryWash)) //If the player begins washing game
                 {
-                    if(HavePlayerClothes && HaveJerryClothes && !JerryClothesClean)
+                    if (HavePlayerClothes && HaveJerryClothes && !JerryClothesClean)
                     {
                         StartCoroutine(washJerryClothes());
                     }
-                    else if(HaveJerryClothes && !JerryClothesClean)
+                    else if (HaveJerryClothes && !JerryClothesClean)
                     {
                         StartCoroutine(washJerryClothes());
                     }
@@ -94,12 +81,12 @@ public class PlayerObjectInteraction : MonoBehaviour
                         JerryWash = false;
                         Debug.Log("Jerry laundry done");
                     }
-                    
+
                     else
                     {
                         HaveJerryClothes = true;
                     }
-                    
+
                 }
                 else if (xyz.gameObject.tag == "PlayerDirtyClothes" && wash) //If the player begins washing game
                 {
@@ -122,8 +109,8 @@ public class PlayerObjectInteraction : MonoBehaviour
                 }
                 else if (xyz.gameObject.tag == "LoungeDoor") //If the player begins toothbrush game
                 {
-                    
-                    if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
+
+                    if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
                     {
                         PlayerMovement.xPosition = 6.8f;
                         PlayerMovement.yPosition = -2.18f;
@@ -143,10 +130,10 @@ public class PlayerObjectInteraction : MonoBehaviour
                 }
                 else if (xyz.gameObject.tag == "BathroomDoor") //If the player begins toothbrush game
                 {
-                    
+
                     PlayerMovement.xPosition = -6.5f;
                     PlayerMovement.yPosition = -1.78f;
-                    
+
                     Debug.Log(PlayerPoints);
                     SceneManager.LoadScene(1);
                 }
@@ -173,12 +160,11 @@ public class PlayerObjectInteraction : MonoBehaviour
         abc = true;
         xyz = collision;
     }
-   
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         abc = false;
     }
-<<<<<<< HEAD
     public IEnumerator washJerryClothes()
     {
         HaveJerryClothes = false;
@@ -194,11 +180,5 @@ public class PlayerObjectInteraction : MonoBehaviour
 
         PlayerClothesClean = true;
         Debug.Log("Player laundry finished");
-=======
-
-    public void AllowReset()
-    {
-        AllowResetStats = true;
->>>>>>> 7a55166b6baf953be0112811460df7d98b6e4cf8
     }
 }
