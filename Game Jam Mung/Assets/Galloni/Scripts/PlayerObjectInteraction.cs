@@ -45,11 +45,9 @@ public class PlayerObjectInteraction : MonoBehaviour
                     Debug.Log(PlayerPoints);
                     eat = false;
                 }
-                else if (xyz.gameObject.tag == "ReadingInteractionZone" && reading) //If the player begins Reading game
+                else if (xyz.gameObject.tag == "ReadingInteractionZone") //If the player begins Reading game
                 {
-                    PlayerPoints += 1;
-                    Debug.Log(PlayerPoints);
-                    reading = false;
+                    xyz.gameObject.transform.GetChild(1).gameObject.SetActive(true);
                 }
                 else if (xyz.gameObject.tag == "LoungeDoor") //If the player begins toothbrush game
                 {

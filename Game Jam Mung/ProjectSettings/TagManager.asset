@@ -12,6 +12,7 @@ TagManager:
   - KitchenDoor
   - BedroomDoor
   - BathroomDoor
+  - ReadingInteractionZone
   layers:
   - Default
   - TransparentFX

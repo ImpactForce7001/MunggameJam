@@ -7,17 +7,13 @@ public class ReadingMinigame : MonoBehaviour
 {
     public GameObject leftSideSample;
     public GameObject rightSideSample;
-    public GameObject leftSideInput;
     public GameObject rightSideInput;
 
     private TextMeshProUGUI leftSideSampleTMP;
     private TextMeshProUGUI rightSideSampleTMP;
-    private TextMeshProUGUI leftSideInputTMP;
-    private TextMeshProUGUI rightSideInputTMP;
 
     private string phraseLeft;
     private string phraseRight;
-    private string phraseLeftInput;
     private string phraseRightInput;
 
     private int whichText;
@@ -25,44 +21,23 @@ public class ReadingMinigame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 0;
         leftSideSampleTMP = leftSideSample.GetComponent<TextMeshProUGUI>();
         rightSideSampleTMP = rightSideSample.GetComponent<TextMeshProUGUI>();
-        leftSideInputTMP = leftSideInput.GetComponent<TextMeshProUGUI>();
-        rightSideInputTMP = rightSideInput.GetComponent<TextMeshProUGUI>();
 
-        int randomPhrase = Random.Range(0, 5);
-
-        if (randomPhrase >= 0)
-        {
-            phraseLeft = "its joever";
-            phraseRight = "we're barack";
-        }
-
+        phraseLeft = "The black cat sat on the shaggy carpet.\r\nThe black cat is sitting on the shaggy carpet.\r\nWhat a silly black cat, to sit on the shaggy carpet.";
+        phraseRight = "The black cat has never before sat on the shaggy carpet.\r\nThe black cat will never again sit on the shaggy carpet.";
         leftSideSampleTMP.text = phraseLeft;
         rightSideSampleTMP.text = phraseRight;
+        phraseRight = "The black cat has never before sat on the shaggy carpet.The black cat will never again sit on the shaggy carpet.";
 
-        phraseLeftInput = "";
         phraseRightInput = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(whichText == 1)
-        {
-            if(Input.inputString == "\b")
-            {
-                if (phraseLeftInput.Length > 0)
-                {
-                    phraseLeftInput = phraseLeftInput.Substring(0, phraseLeftInput.Length - 1);
-                }
-            }
-            if(Input.inputString != "\n" && Input.inputString != "\r")
-            {
-                phraseLeftInput += Input.inputString;
-            }
-        }
-        else if(whichText == 2)
+        if(whichText == 2)
         {
             if (Input.inputString == "\b")
             {
@@ -71,19 +46,16 @@ public class ReadingMinigame : MonoBehaviour
                     phraseRightInput = phraseRightInput.Substring(0, phraseRightInput.Length - 1);
                 }
             }
-            if (Input.inputString != "\n" && Input.inputString != "\r")
+            else if(Input.inputString != "\r" && Input.inputString != "\n")
             {
                 phraseRightInput += Input.inputString;
             }
         }
 
-        Debug.Log(whichText);
-        Debug.Log(phraseLeftInput);
-        Debug.Log(phraseRightInput);
-
-        if (phraseLeftInput == phraseLeft && phraseRightInput == phraseRight)
+        if (phraseRightInput == phraseRight)
         {
-            Debug.Log("This shit tweaking");
+            Time.timeScale = 1;
+            PlayerObjectInteraction.PlayerPoints += 1;
             transform.gameObject.SetActive(false);
         }
     }
