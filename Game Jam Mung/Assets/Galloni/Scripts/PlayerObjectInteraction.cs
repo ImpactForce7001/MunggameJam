@@ -13,6 +13,7 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool eat = true;
     public static bool wash = true;
     public static bool reading = true;
+    public GameObject teethObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +30,8 @@ public class PlayerObjectInteraction : MonoBehaviour
                 
                 if (xyz.gameObject.tag == "ToothbrushInteractionZone" && teeth) //If the player begins toothbrush game
                 {
-                    PlayerPoints += 1;
-                    Debug.Log(PlayerPoints);
-                    teeth = false;
+                    teethminigame.teethStart = true;
+                    teethObject.SetActive(true);
                 }
                 else if (xyz.gameObject.tag == "LaundryInteractionZone" && wash) //If the player begins washing game
                 {
