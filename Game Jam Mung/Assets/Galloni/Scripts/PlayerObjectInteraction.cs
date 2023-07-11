@@ -41,8 +41,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                 }
                 else if (xyz.gameObject.tag == "FridgeinteractionZone" && eat) //If the player begins eating game
                 {
-                    PlayerPoints += 1;
-                    Debug.Log(PlayerPoints);
+                    xyz.gameObject.transform.GetChild(1).gameObject.GetComponent<BurgerMinigame>().StartBurgerGame();
                     eat = false;
                 }
                 else if (xyz.gameObject.tag == "ReadingInteractionZone") //If the player begins Reading game
