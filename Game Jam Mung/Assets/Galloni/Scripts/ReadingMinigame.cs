@@ -21,7 +21,7 @@ public class ReadingMinigame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
+        PlayerMovement.inGame = true;
         leftSideSampleTMP = leftSideSample.GetComponent<TextMeshProUGUI>();
         rightSideSampleTMP = rightSideSample.GetComponent<TextMeshProUGUI>();
 
@@ -54,8 +54,12 @@ public class ReadingMinigame : MonoBehaviour
 
         if (phraseRightInput == phraseRight)
         {
+<<<<<<< HEAD
             PhoneController.strikeBook = true;
             Time.timeScale = 1;
+=======
+            PlayerMovement.inGame = false;
+>>>>>>> 1846b1963845f6bb7ee7391abc28728f97a082c2
             PlayerObjectInteraction.PlayerPoints += 1;
             transform.gameObject.SetActive(false);
         }

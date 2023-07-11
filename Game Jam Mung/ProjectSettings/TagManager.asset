@@ -13,7 +13,12 @@ TagManager:
   - BedroomDoor
   - BathroomDoor
   - ReadingInteractionZone
+<<<<<<< HEAD
   - PhoneInteractionZone
+=======
+  - JerryDirtyClothes
+  - PlayerDirtyClothes
+>>>>>>> 1846b1963845f6bb7ee7391abc28728f97a082c2
   layers:
   - Default
   - TransparentFX
