@@ -54,6 +54,8 @@ public class ReadingMinigame : MonoBehaviour
 
         if (phraseRightInput == phraseRight)
         {
+
+            PhoneController.strikeBook = true;
             PlayerMovement.inGame = false;
             PlayerObjectInteraction.PlayerPoints += 1;
             transform.gameObject.SetActive(false);

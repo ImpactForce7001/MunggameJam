@@ -11,6 +11,7 @@ public class PlayerObjectInteraction : MonoBehaviour
     private Collider2D xyz;
     public static bool teeth = true;
     public static bool eat = true;
+    public static bool eatJerry = true;
     public static bool wash = true;
     public static bool reading = true;
     public static bool JerryTeeth = true;
@@ -103,9 +104,19 @@ public class PlayerObjectInteraction : MonoBehaviour
                     xyz.gameObject.transform.GetChild(1).gameObject.GetComponent<BurgerMinigame>().StartBurgerGame();
                     eat = false;
                 }
+                else if (xyz.gameObject.tag == "StoveinteractionZone" && eatJerry) //If the player begins eating game
+                {
+                    xyz.gameObject.transform.GetChild(1).gameObject.GetComponent<BurgerMinigame>().StartBurgerGame();
+                    eatJerry = false;
+                }
                 else if (xyz.gameObject.tag == "ReadingInteractionZone") //If the player begins Reading game
                 {
                     xyz.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                    reading = false;
+                }
+                else if(xyz.gameObject.tag == "PhoneInteractionZone")
+                {
+                    xyz.gameObject.SetActive(false);
                 }
                 else if (xyz.gameObject.tag == "LoungeDoor") //If the player begins toothbrush game
                 {
@@ -120,7 +131,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                         PlayerMovement.xPosition = -2.85f;
                         PlayerMovement.yPosition = -2.18f;
                     }
-                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3))
+                    else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3)|| SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(5))
                     {
                         PlayerMovement.xPosition = -8f;
                         PlayerMovement.yPosition = -2.18f;
