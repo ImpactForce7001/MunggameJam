@@ -14,10 +14,21 @@ public class PlayerObjectInteraction : MonoBehaviour
     public static bool wash = true;
     public static bool reading = true;
     public GameObject teethObject;
+
+    public static bool newDay = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (newDay)
+        {
+            newDay = false;
+            JerryPoints = 0;
+            PlayerPoints = 0;
+            teeth = true;
+            eat = true;
+            wash = true;
+            reading = true;
+        }
     }
 
     // Update is called once per frame
