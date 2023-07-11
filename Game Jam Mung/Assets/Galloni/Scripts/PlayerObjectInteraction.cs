@@ -81,6 +81,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                 {
                     if (JerryClothesClean)
                     {
+                        PhoneController.strikeJLaundry = true;
                         JerryPoints += 1;
                         JerryWash = false;
                         HaveJerryClothes = false;
@@ -97,6 +98,7 @@ public class PlayerObjectInteraction : MonoBehaviour
                 {
                     if (PlayerClothesClean)
                     {
+                        PhoneController.strikeLaundry = true;
                         PlayerPoints += 1;
                         wash = false;
                         HavePlayerClothes = false;
